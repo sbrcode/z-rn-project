@@ -1,0 +1,51 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "~1.15.0",
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/material-bottom-tabs": "^6.0.5",
+    "@react-navigation/native": "^6.0.2",
+    "@react-navigation/stack": "^6.0.7",
+    "axios": "^0.21.1",
+    "expo": "^42.0.3",
+    "expo-application": "~3.2.0",
+    "expo-constants": "~11.0.1",
+    "expo-device": "~3.3.0",
+    "expo-image-picker": "^10.2.3",
+    "expo-localization": "~10.2.0",
+    "expo-notifications": "~0.12.3",
+    "expo-status-bar": "~1.0.4",
+    "expo-updates": "~0.8.2",
+    "formik": "^2.2.9",
+    "i18n-js": "^3.8.0",
+    "idx": "^2.5.6",
+    "qs": "^6.10.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-paper": "^4.9.2",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-web": "~0.13.12",
+    "sentry-expo": "^4.0.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-native": "^3.11.0",
+    "prettier": "^2.3.2"
+  },
+  "private": true
+}
