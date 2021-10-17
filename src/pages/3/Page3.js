@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Image, FlatList, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Image, FlatList, SafeAreaView, View } from 'react-native';
 import Colors from '../../theme/Colors';
 import * as ImagePicker from 'expo-image-picker';
+import * as Sharing from 'expo-sharing';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Page3 = () => {
@@ -28,6 +29,15 @@ const Page3 = () => {
     return setSelectedList(newSelectedList);
   };
 
+  let openShareDialogAsync = async (index) => {
+    if (!(await Sharing.isAvailableAsync())) {
+      alert(`Uh oh, sharing isn't available on your platform`);
+      return;
+    }
+    console.log(selectedList[index]);
+    await Sharing.shareAsync(selectedList[index].uri);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       {selectedList && selectedList.length !== 0 && (
@@ -40,9 +50,14 @@ const Page3 = () => {
               <>
                 <Image source={{ uri: item.uri }} style={styles.thumbnail} />
                 {item.uri && (
-                  <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => imageToTrash(index)}>
-                    <MaterialCommunityIcons name='trash-can' color={Colors.darkorange} size={48} />
-                  </TouchableOpacity>
+                  <View style={{ flexDirection: 'row' }}>
+                    <TouchableOpacity onPress={() => imageToTrash(index)}>
+                      <MaterialCommunityIcons name='trash-can' color={Colors.darkorange} size={48} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => openShareDialogAsync(index)}>
+                      <MaterialCommunityIcons name='export-variant' color={Colors.green} size={40} />
+                    </TouchableOpacity>
+                  </View>
                 )}
               </>
             )}
@@ -84,8 +99,8 @@ const styles = StyleSheet.create({
     color: Colors.white,
   },
   thumbnail: {
-    width: 100,
-    height: 200,
+    width: 150,
+    height: 300,
     resizeMode: 'cover',
     marginHorizontal: 5,
   },

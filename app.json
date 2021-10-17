@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "rntemplate",
-    "slug": "rntemplate",
-    "scheme": "rntemplate",
+    "name": "Learn React Native",
+    "slug": "learn-react-native",
+    "scheme": "learnrn",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -20,7 +20,7 @@
         "usesNonExemptEncryption": false
       },
       "supportsTablet": false,
-      "bundleIdentifier": "fr.rntemplate.app",
+      "bundleIdentifier": "fr.learnreactnative.app",
       "buildNumber": "1"
     },
     "android": {
@@ -29,7 +29,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "useNextNotificationsApi": true,
-      "package": "fr.rntemplate.app",
+      "package": "fr.learnreactnative.app",
       "versionCode": 1
     },
     "web": {
@@ -37,6 +37,10 @@
     },
     "notification": {
       "iosDisplayInForeground": true
-    }
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content"
+    },
+    "userInterfaceStyle": "automatic"
   }
 }
