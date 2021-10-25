@@ -2,7 +2,7 @@ const RoutesNames = {
   LoginPage: 'LoginPage',
   BottomTab: 'BottomTab',
   Page1: 'Accueil',
-  Page2: 'Page2',
+  Page2: 'Animations',
   Page3: 'Image',
   Page4: 'JustifyContent',
 };

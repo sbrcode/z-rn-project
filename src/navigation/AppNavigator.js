@@ -35,7 +35,7 @@ function BottomTab() {
         name={RoutesNames.Page2}
         component={Page2}
         options={{
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name='numeric-2' color={color} size={24} />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name='animation' color={color} size={24} />,
         }}
       />
       <Tab.Screen
