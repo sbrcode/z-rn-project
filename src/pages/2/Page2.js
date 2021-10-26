@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   fadingContainer: {
     padding: 20,
-    backgroundColor: Colors.grey,
+    backgroundColor: Colors.brown,
   },
   fadingText: {
     fontSize: 28,

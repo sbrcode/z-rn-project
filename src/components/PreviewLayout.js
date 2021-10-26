@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 8,
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.primary30,
   },
   row: {
     flexDirection: 'row',
@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   selected: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.tertiary,
     borderWidth: 0,
   },
   buttonLabel: {
     fontSize: 12,
     fontWeight: '500',
-    color: Colors.primary,
+    color: Colors.tertiary,
   },
   selectedLabel: {
     color: Colors.white,

@@ -13,9 +13,9 @@ const Page4 = () => {
       values={['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']}
       setSelectedValue={setJustifyContent}
     >
-      <View style={[styles.box, { backgroundColor: Colors.green }]} />
-      <View style={[styles.box, { backgroundColor: Colors.yellow }]} />
-      <View style={[styles.box, { backgroundColor: Colors.red }]} />
+      <View style={[styles.box, { backgroundColor: Colors.primary }]} />
+      <View style={[styles.box, { backgroundColor: Colors.secondary }]} />
+      <View style={[styles.box, { backgroundColor: Colors.tertiary }]} />
     </PreviewLayout>
   );
 };

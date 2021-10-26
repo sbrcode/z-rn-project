@@ -52,10 +52,10 @@ const Page3 = () => {
                 {item.uri && (
                   <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity onPress={() => imageToTrash(index)}>
-                      <MaterialCommunityIcons name='trash-can' color={Colors.darkorange} size={48} />
+                      <MaterialCommunityIcons name='trash-can' color={Colors.brown} size={48} />
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => openShareDialogAsync(index)}>
-                      <MaterialCommunityIcons name='export-variant' color={Colors.green} size={40} />
+                      <MaterialCommunityIcons name='export-variant' color={Colors.secondary} size={40} />
                     </TouchableOpacity>
                   </View>
                 )}
@@ -64,7 +64,7 @@ const Page3 = () => {
           />
           <TouchableOpacity
             onPress={() => setSelectedList([])}
-            style={[styles.button, { backgroundColor: Colors.darkorange }]}
+            style={[styles.button, { backgroundColor: Colors.brown }]}
           >
             <Text style={styles.buttonText}>{'Delete All Images !'}</Text>
           </TouchableOpacity>
