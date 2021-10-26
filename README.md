@@ -1,25 +1,25 @@
 # README
 
-## importer le projet
+## clone project
 
 ```
 git clone https://github.com/sbrcode/z-rn-project.git
 cd z-rn-project
 ```
 
-## initialiser le projet avec les dépendances
+## initialize project with dependencies
 
 ```
 yarn install
 ```
 
-## démarrer le projet
+## start project
 
 ```
 yarn start
 ```
 
-## Télécharger "Expo Go" sur votre mobile
+## Download "Expo Go" into your device
 
-- Android: ouvrir Expo Go et scanner le QR Code
-- iOS: scanner le QR Code avec l'appareil photo
+- Android: open Expo Go and scan QR Code
+- iOS: open camera and scan QR Code
