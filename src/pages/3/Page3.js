@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, Image, FlatList, SafeAreaView, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, Image, FlatList, SafeAreaView, View } from 'react-native';
 import Colors from '../../theme/Colors';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import CustomButton from '../../components/CustomButton';
 
 const Page3 = () => {
   const [selectedList, setSelectedList] = useState([]);
@@ -62,17 +63,14 @@ const Page3 = () => {
               </>
             )}
           />
-          <TouchableOpacity
+          <CustomButton
+            label={'Delete All Images !'}
             onPress={() => setSelectedList([])}
-            style={[styles.button, { backgroundColor: Colors.brown }]}
-          >
-            <Text style={styles.buttonText}>{'Delete All Images !'}</Text>
-          </TouchableOpacity>
+            customStyle={{ backgroundColor: Colors.grey }}
+          />
         </>
       )}
-      <TouchableOpacity onPress={openImagePickerAsync} style={[styles.button, { backgroundColor: Colors.primary }]}>
-        <Text style={styles.buttonText}>{'Pick a photo'}</Text>
-      </TouchableOpacity>
+      <CustomButton label={'Pick a photo'} onPress={openImagePickerAsync} />
     </SafeAreaView>
   );
 };
@@ -88,15 +86,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  button: {
-    marginBottom: 20,
-    padding: 10,
-    borderRadius: 5,
-  },
-  buttonText: {
-    fontSize: 20,
-    color: Colors.white,
   },
   thumbnail: {
     width: 150,

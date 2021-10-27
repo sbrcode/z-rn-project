@@ -6,6 +6,12 @@ const AppStyle = StyleSheet.create({
   form: {
     padding: 24,
   },
+  button: {
+    marginHorizontal: 70,
+    marginVertical: 15,
+    padding: 10,
+    borderRadius: 10,
+  },
 });
 
 export default AppStyle;

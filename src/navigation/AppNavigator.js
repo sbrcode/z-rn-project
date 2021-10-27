@@ -3,16 +3,18 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createStackNavigator } from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
-
+// import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
 import RoutesNames from './RoutesNames';
 import Colors from '../theme/Colors';
 import { headerStyle } from '../theme/AppStyle';
-import Page4 from '../pages/1/Page4';
 import Page1 from '../pages/1/Page1';
 import Page2 from '../pages/2/Page2';
 import Page3 from '../pages/3/Page3';
+import Page4 from '../pages/1/Page4';
+import Page5 from '../pages/1/Page5';
 
 const Tab = createMaterialBottomTabNavigator();
+// const Tab = CurvedBottomBar();
 const Stack = createStackNavigator();
 
 function BottomTab() {
@@ -70,6 +72,7 @@ export default function AppNavigator() {
         })}
       />
       <Stack.Screen name={RoutesNames.Page4} component={Page4} options={headerStyle} />
+      <Stack.Screen name={RoutesNames.Page5} component={Page5} options={headerStyle} />
       {/* add other screens here */}
     </Stack.Navigator>
   );
