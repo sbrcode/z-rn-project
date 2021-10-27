@@ -6,6 +6,7 @@ const RoutesNames = {
   Page3: 'Image',
   Page4: 'JustifyContent',
   Page5: 'AlignItems',
+  Page6: 'AlignContent',
 };
 
 export default RoutesNames;

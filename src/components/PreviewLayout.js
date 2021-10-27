@@ -15,7 +15,9 @@ const PreviewLayout = ({ label, children, values, selectedValue, setSelectedValu
         </TouchableOpacity>
       ))}
     </View>
-    <View style={[styles.container, { [label]: selectedValue }]}>{children}</View>
+    <View style={[styles.container, { [label]: selectedValue }, label === 'alignContent' && { flexWrap: 'wrap' }]}>
+      {children}
+    </View>
   </View>
 );
 

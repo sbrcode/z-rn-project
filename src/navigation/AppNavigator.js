@@ -12,6 +12,7 @@ import Page2 from '../pages/2/Page2';
 import Page3 from '../pages/3/Page3';
 import Page4 from '../pages/1/Page4';
 import Page5 from '../pages/1/Page5';
+import Page6 from '../pages/1/Page6';
 
 const Tab = createMaterialBottomTabNavigator();
 // const Tab = CurvedBottomBar();
@@ -73,6 +74,7 @@ export default function AppNavigator() {
       />
       <Stack.Screen name={RoutesNames.Page4} component={Page4} options={headerStyle} />
       <Stack.Screen name={RoutesNames.Page5} component={Page5} options={headerStyle} />
+      <Stack.Screen name={RoutesNames.Page6} component={Page6} options={headerStyle} />
       {/* add other screens here */}
     </Stack.Navigator>
   );

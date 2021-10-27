@@ -14,6 +14,7 @@ const Page1 = ({ navigation }) => {
     <View style={[Alignments.fillColMain, { backgroundColor: Colors.primary30 }]}>
       <CustomButton label={RoutesNames.Page4} onPress={() => navigation.navigate(RoutesNames.Page4)} />
       <CustomButton label={RoutesNames.Page5} onPress={() => navigation.navigate(RoutesNames.Page5)} />
+      <CustomButton label={RoutesNames.Page6} onPress={() => navigation.navigate(RoutesNames.Page6)} />
       <CustomButton label={'logout'} onPress={logout} customStyle={{ backgroundColor: Colors.grey }} />
     </View>
   );
