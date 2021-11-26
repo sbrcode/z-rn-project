@@ -10,9 +10,10 @@ import { headerStyle } from '../theme/AppStyle';
 import Page1 from '../pages/1/Page1';
 import Page2 from '../pages/2/Page2';
 import Page3 from '../pages/3/Page3';
-import Page4 from '../pages/1/Page4';
-import Page5 from '../pages/1/Page5';
-import Page6 from '../pages/1/Page6';
+import Page4 from '../pages/4/Page4';
+import Page11 from '../pages/1/Page11';
+import Page12 from '../pages/1/Page12';
+import Page13 from '../pages/1/Page13';
 
 const Tab = createMaterialBottomTabNavigator();
 // const Tab = CurvedBottomBar();
@@ -31,21 +32,36 @@ function BottomTab() {
         name={RoutesNames.Page1}
         component={Page1}
         options={{
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name='home' color={color} size={24} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='home' color={color} size={24} />
+          ),
         }}
       />
       <Tab.Screen
         name={RoutesNames.Page2}
         component={Page2}
         options={{
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name='animation' color={color} size={24} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='animation' color={color} size={24} />
+          ),
         }}
       />
       <Tab.Screen
         name={RoutesNames.Page3}
         component={Page3}
         options={{
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name='image-plus' color={color} size={24} />,
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='image-plus' color={color} size={24} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={RoutesNames.Page4}
+        component={Page4}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='account-circle' color={color} size={24} />
+          ),
         }}
       />
     </Tab.Navigator>
@@ -72,9 +88,9 @@ export default function AppNavigator() {
           ...headerStyle,
         })}
       />
-      <Stack.Screen name={RoutesNames.Page4} component={Page4} options={headerStyle} />
-      <Stack.Screen name={RoutesNames.Page5} component={Page5} options={headerStyle} />
-      <Stack.Screen name={RoutesNames.Page6} component={Page6} options={headerStyle} />
+      <Stack.Screen name={RoutesNames.Page11} component={Page11} options={headerStyle} />
+      <Stack.Screen name={RoutesNames.Page12} component={Page12} options={headerStyle} />
+      <Stack.Screen name={RoutesNames.Page13} component={Page13} options={headerStyle} />
       {/* add other screens here */}
     </Stack.Navigator>
   );

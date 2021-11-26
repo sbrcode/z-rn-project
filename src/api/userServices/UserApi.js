@@ -17,7 +17,7 @@ const loginUser = async (login, password) => {
 const getUserInfos = async () => {
   try {
     // TODO implement WS
-    const res = { name: 'testUser' };
+    const res = { name: 'M. User Test' };
     return res;
   } catch (e) {
     return { error: { message: e.message } };

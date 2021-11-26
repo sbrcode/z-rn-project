@@ -3,14 +3,21 @@ import { StyleSheet, View } from 'react-native';
 import Colors from '../../theme/Colors';
 import PreviewLayout from '../../components/PreviewLayout';
 
-const Page4 = () => {
+const Page11 = () => {
   const [justifyContent, setJustifyContent] = useState('flex-start');
 
   return (
     <PreviewLayout
       label='justifyContent'
       selectedValue={justifyContent}
-      values={['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']}
+      values={[
+        'flex-start',
+        'flex-end',
+        'center',
+        'space-between',
+        'space-around',
+        'space-evenly',
+      ]}
       setSelectedValue={setJustifyContent}
     >
       <View style={[styles.box, { backgroundColor: Colors.primary }]} />
@@ -27,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Page4;
+export default Page11;

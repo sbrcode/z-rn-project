@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import Colors from '../../theme/Colors';
 import PreviewLayout from '../../components/PreviewLayout';
 
-const Page5 = () => {
+const Page12 = () => {
   const [alignItems, setAlignItems] = useState('stretch');
 
   return (
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Page5;
+export default Page12;

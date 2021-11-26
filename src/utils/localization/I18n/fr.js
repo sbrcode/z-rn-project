@@ -7,7 +7,8 @@ export default {
     no: 'Non',
     error: 'Une erreur est survenue',
     trylater: 'Veuillez réessayer plus tard',
-    save: 'Sauvegarder',
+    save: 'Sauvegarder →',
+    change: 'Modifier →',
   },
   error: {
     notValidEmail: 'Veuillez rentrer une adresse e-mail valide',
