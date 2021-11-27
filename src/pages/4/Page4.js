@@ -42,7 +42,7 @@ const Page4 = () => {
       label={I18n.t('app.change')}
       mode={'flat'}
       color={Colors.darkorange}
-      customStyle={{ padding: 0, marginTop: -5 }}
+      customStyle={styles.customBtn}
       onPress={onPress}
     />
   );
@@ -52,12 +52,10 @@ const Page4 = () => {
   );
 
   const modifyEmail = async (values) => {
-    setMod('');
     setEmail(values.login);
   };
 
   const modifyPassword = async (values) => {
-    setMod('');
     setPwd(values.password);
   };
 
@@ -73,14 +71,18 @@ const Page4 = () => {
       </View>
       <View style={styles.userInfos}>
         <MaterialCommunityIcons name='email' color={Colors.darkorange} size={24} />
-        <Text style={styles.text}>{email ? email : initialValues.login}</Text>
-        <ModifyButton onPress={() => setMod('modEmail')} />
+        <Text numberOfLines={2} style={styles.text}>
+          {email ? email : initialValues.login}
+        </Text>
       </View>
+      <ModifyButton onPress={() => setMod('modEmail')} />
       <View style={styles.userInfos}>
         <MaterialCommunityIcons name='lock' color={Colors.darkorange} size={24} />
-        <Text style={styles.text}>{pwd ? pwd : initialValues.password}</Text>
-        <ModifyButton onPress={() => setMod('modPwd')} />
+        <Text numberOfLines={2} style={styles.text}>
+          {pwd ? pwd : initialValues.password}
+        </Text>
       </View>
+      <ModifyButton onPress={() => setMod('modPwd')} />
       {mod === 'modEmail' ? (
         <FormView>
           <Form onSubmit={modifyEmail} initialValues={initialValues} schema={schema1}>
@@ -123,7 +125,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: Colors.primary,
-    marginLeft: 10,
+    marginHorizontal: 10,
     fontSize: 20,
   },
   submitButton: {
@@ -134,5 +136,11 @@ const styles = StyleSheet.create({
   },
   fields: {
     marginHorizontal: 20,
+  },
+  customBtn: {
+    padding: 0,
+    marginRight: 15,
+    marginLeft: 200,
+    marginTop: -10,
   },
 });
